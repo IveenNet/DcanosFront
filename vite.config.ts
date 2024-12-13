@@ -6,16 +6,20 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
+        target: 'https://dcanosestilistas.onrender.com/api',
         changeOrigin: true,
-        secure: false
-      }
-    }
+        secure: false,
+      },
+    },
   },
   build: {
+    outDir: 'dist',
     rollupOptions: {
-      plugins: [
-      ]
-    }
-  }
+      input: 'index.html', // Asegúrate de incluir el index.html
+    },
+  },
+  base: './', // Usar rutas relativas
+  optimizeDeps: {
+    include: ['react', 'react-dom'],
+  },
 });
