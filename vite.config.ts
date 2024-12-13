@@ -18,7 +18,7 @@ export default defineConfig({
       input: 'index.html', // Asegúrate de incluir el index.html
     },
   },
-  base: './', // Usar rutas relativas
+  base: './', // Usar rutas rlativas
   optimizeDeps: {
     include: ['react', 'react-dom'],
   },
